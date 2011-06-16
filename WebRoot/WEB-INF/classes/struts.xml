@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="user" extends="struts-default" namespace="/">
+		
+		<action name="addUser" class="userAction" method="addUser">
+			<result>/index.jsp</result>
+		</action>
+		
+		<action name="deleteUser" class="userAction" method="deleteUser">
+			<result>/list.jsp</result>
+		</action>
+		
+		<action name="updateUser" class="userAction" method="updateUser">
+			<result>/list.jsp</result>
+		</action>
+		
+		<action name="getAllUser" class="userAction" method="getAllUser">
+			<result>/list.jsp</result>
+		</action>
+		
+		<action name="getUserByID" class="userAction" method="getUserByID">
+			<result>/list.jsp</result>
+		</action>
+	</package>
+	<package name="login" extends="struts-default">
+		<action name="userLogin" class="loginAction"
+			method="userLogin">
+			<result name="AdminLogin">
+				/AdminLogin.jsp
+			</result>
+			<result name="Login">
+				/Login.jsp
+			</result>
+		</action>
+	</package>
+	
+</struts>
